@@ -1,0 +1,90 @@
+{
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "es6": true,
+    "node": true,
+    "jest": true
+  },
+  "globals": {
+    "it": true,
+    "fit": true,
+    "shallow": true,
+    "expect": true,
+    "render": true,
+    "mount": true
+  },
+  "extends": "airbnb",
+  "parser": "babel-eslint",
+  "settings": {
+    "import/core-modules": [
+      "App",
+      "route",
+      "reactApplication"
+    ],
+    "import/resolver": {
+      "node": {
+        "paths": [
+          "./server",
+          "./src",
+          "./config"
+        ]
+      }
+    }
+  },
+  "rules": {
+    "arrow-body-style": [
+      0,
+      "never"
+    ],
+    "react/no-multi-comp": [
+      2,
+      {
+        "ignoreStateless": false
+      }
+    ],
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": [
+          "**/*.stories.js",
+          "**/mocks/*.js"
+        ]
+      }
+    ],
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [
+          ".js",
+          ".jsx"
+        ]
+      }
+    ],
+    "jsx-a11y/anchor-is-valid": [
+      "error",
+      {
+        "components": [
+          "Link"
+        ],
+        "specialLink": [
+          "to"
+        ],
+        "aspects": [
+          "noHref"
+        ]
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": [
+        "./*.js",
+        "./ci/**/*.js"
+      ],
+      "rules": {
+        "no-console": "off"
+      }
+    }
+  ]
+}
