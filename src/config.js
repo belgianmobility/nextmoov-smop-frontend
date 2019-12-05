@@ -7,7 +7,7 @@ export default {
       station: '/station',
       address: '/address',
     },
-    map: '/map',
+    mapServerBase: '/tiles',
     routing: '/routing/route',
   },
 };
