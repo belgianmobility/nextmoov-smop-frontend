@@ -12,13 +12,15 @@ import isMyObjectEmpty from '../../utils/isMyObjectEmpty';
 
 type Props = {
   onResultClick?: Function,
-  position?: Array<number>
+  position?: Array<number>,
+  lang?: string,
 }
 
 function Sidebar(props: Props) {
   const {
     onResultClick,
     position,
+    lang,
   } = props;
 
   const initialState = {
@@ -90,7 +92,7 @@ function Sidebar(props: Props) {
                 key={`${result + index}`}
                 id={result}
                 onResultClick={handleResultClick}
-                lang="en"
+                lang={lang}
                 results={results[result]}
                 onChange={handleChange}
               />
@@ -105,6 +107,7 @@ function Sidebar(props: Props) {
 Sidebar.defaultProps = {
   onResultClick: () => {},
   position: undefined,
+  lang: 'en',
 };
 
 export default Sidebar;
