@@ -61,6 +61,9 @@
         ]
       }
     ],
+    "no-underscore-dangle": [
+      0
+    ],
     "jsx-a11y/anchor-is-valid": [
       "error",
       {
