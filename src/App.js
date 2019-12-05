@@ -1,13 +1,13 @@
 // @flow
 import React from 'react';
-import AutoCompleteSearchBox from './components/AutoCompleteSearchBox';
+import Sidebar from './containers/Sidebar';
 
 
 function App() {
   return (
     <div className="App">
-      <AutoCompleteSearchBox
-        id="from"
+      <Sidebar
+        onResultClick={(e) => console.log(e)}
       />
     </div>
   );
