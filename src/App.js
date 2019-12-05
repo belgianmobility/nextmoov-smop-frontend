@@ -1,14 +1,12 @@
 // @flow
 import React from 'react';
-import Sidebar from './containers/Sidebar';
+import Map from './components/Map';
 
 
 function App() {
   return (
     <div className="App">
-      <Sidebar
-        onResultClick={(e) => console.log(e)}
-      />
+      <Map />
     </div>
   );
 }
