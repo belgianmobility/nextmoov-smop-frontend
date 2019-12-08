@@ -54,6 +54,7 @@ function AutoCompleteSearchBox(props: Props) {
                 onClick={handleClick}
                 lang={lang}
                 title={result}
+                id={id}
               />
             );
           }

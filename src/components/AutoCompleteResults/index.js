@@ -7,6 +7,7 @@ type Props = {
   onClick: Function,
   lang?: string,
   title?: string,
+  id: string,
 }
 
 
@@ -16,6 +17,7 @@ function AutoCompleteResults(props: Props) {
     onClick,
     lang,
     title,
+    id,
   } = props;
 
   return (
@@ -32,6 +34,7 @@ function AutoCompleteResults(props: Props) {
             value={JSON.stringify({
               name: item._source.multiLang[lang],
               geo: item._source.geo,
+              id,
             })}
           >
             {item._source.multiLang[lang]}
