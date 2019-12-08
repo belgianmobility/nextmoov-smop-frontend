@@ -9,17 +9,23 @@ function App() {
   const [itineraries, setItineraries] = useState();
 
   function handleResultClick(e) {
-    const { id, geo } = e;
+    const { id, geo, name } = e;
     if (id === 'from') {
-      setFromPlace(`${geo[0].lat},${geo[0].lon}`);
+      setFromPlace({
+        name,
+        geo: `${geo[0].lat},${geo[0].lon}`,
+      });
     } if (id === 'to') {
-      setToPlace(`${geo[0].lat},${geo[0].lon}`);
+      setToPlace({
+        name,
+        geo: `${geo[0].lat},${geo[0].lon}`,
+      });
     }
   }
 
   useEffect(() => {
     if (fromPlace !== undefined && toPlace !== undefined) {
-      searchTrip(fromPlace, toPlace).then((res) => setItineraries(res.plan.itineraries));
+      searchTrip(fromPlace.geo, toPlace.geo).then((res) => setItineraries(res.plan.itineraries));
     }
   }, [fromPlace, toPlace]);
 
@@ -28,6 +34,8 @@ function App() {
       <Sidebar
         onResultClick={handleResultClick}
         itineraries={itineraries}
+        from={fromPlace !== undefined ? fromPlace.name : ''}
+        to={toPlace !== undefined ? toPlace.name : ''}
       />
     </div>
   );
