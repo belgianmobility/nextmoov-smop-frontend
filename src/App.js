@@ -23,13 +23,11 @@ function App() {
     }
   }, [fromPlace, toPlace]);
 
-  console.log(itineraries);
-
-
   return (
     <div className="App">
       <Sidebar
         onResultClick={handleResultClick}
+        itineraries={itineraries}
       />
     </div>
   );
