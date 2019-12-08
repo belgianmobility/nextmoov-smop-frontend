@@ -7,6 +7,23 @@ export default function (lang) {
   const langName = `name_${lang}`;
 
   return {
+    fitboundsOptions: {
+      padding: {
+        top: 60,
+        bottom: 60,
+        left: 60,
+        right: 60,
+      },
+    },
+    containerStyle: {
+      height: '100vh',
+      width: '70vw',
+      position: 'relative',
+    },
+    animationOptions: {
+      duration: 0,
+      animate: false,
+    },
     mapStyle: {
       version: 8,
       glyphs:
