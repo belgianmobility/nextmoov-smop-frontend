@@ -13,7 +13,7 @@ export const findBounds = (polylines) => {
       if (lng >= newAccu.e) { newAccu.e = lng; }
       if (lng <= newAccu.w) { newAccu.w = lng; }
 
-      return test;
+      return newAccu;
     }, {
       ...acc,
     });
