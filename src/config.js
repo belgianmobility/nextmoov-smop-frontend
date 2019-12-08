@@ -7,7 +7,7 @@ export default {
       station: '/station',
       address: '/address',
     },
-    map: '/map',
     searchTrip: '/otp/routers/default/plan?',
+    mapServerBase: '/tiles',
   },
 };
