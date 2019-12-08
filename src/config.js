@@ -8,6 +8,6 @@ export default {
       address: '/address',
     },
     map: '/map',
-    routing: '/routing/route',
+    searchTrip: '/otp/routers/default/plan?',
   },
 };
