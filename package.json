@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@mapbox/polyline": "^1.1.0",
     "css-loader": "^2.0.1",
     "lodash.debounce": "^4.0.8",
     "lodash.throttle": "^4.1.1",
