@@ -13,7 +13,7 @@ type Props = {
   polylines?: Array<Array<number>>,
   colors?: Array<string>,
   modes?: Array<string>,
-  intermediatesStops?: Array<Array<number>>,
+  intermediateStops?: Array<Array<number>>,
 }
 
 const DEFAULT_COORDS = [4.3571273, 50.8452665];
@@ -26,7 +26,7 @@ function Map(props: Props) {
     polylines,
     colors,
     modes,
-    intermediatesStops,
+    intermediateStops,
   } = props;
 
   const [hasPolyLines, setHasPolylines] = useState();
@@ -68,7 +68,7 @@ function Map(props: Props) {
           polylines={polylines}
           colors={colors}
           modes={modes}
-          intermediatesStops={intermediatesStops}
+          intermediateStops={intermediateStops}
         />
       )}
       <LayerMarker
@@ -85,7 +85,7 @@ Map.defaultProps = {
   polylines: [],
   colors: [],
   modes: [],
-  intermediatesStops: [],
+  intermediateStops: [],
 };
 
 export default Map;

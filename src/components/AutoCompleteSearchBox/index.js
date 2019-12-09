@@ -46,7 +46,7 @@ function AutoCompleteSearchBox(props: Props) {
       />
       {!isMyObjectEmpty(results) && (
         Object.keys(results).map((result, index) => {
-          if (results[result].length > 0) {
+          if (results[result] && results[result].length > 0) {
             return (
               <AutoCompleteResults
                 key={`${result + index}`}

@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import Map from './index';
 import {
-  polylinesTest2, legsColors, legsModes, intermediatesStops,
+  polylinesTest2, legsColors, legsModes, intermediateStops,
 } from '../../mocks/map';
 
 // =============================================================================
@@ -18,6 +18,6 @@ stories
       polylines={polylinesTest2}
       colors={legsColors}
       modes={legsModes}
-      intermediatesStops={intermediatesStops}
+      intermediateStops={intermediateStops}
     />
   ));

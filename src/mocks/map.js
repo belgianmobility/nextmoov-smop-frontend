@@ -583,7 +583,7 @@ export const legsModes = legsInfos.map((info, index) => legsInfos[index].legMode
 export const polylines = legs.map((item) => mapBoxPolyline.decode(item.legGeometry.points));
 export const polylinesTest1 = legs.map((item) => mapBoxPolyline.decode(item.legGeometry.points));
 export const polylinesTest2 = legs2.map((item) => mapBoxPolyline.decode(item.legGeometry.points));
-export const intermediatesStops = legs.map((item) => item.intermediateStops);
+export const intermediateStops = legs.map((item) => item.intermediateStops);
 
 
 export const polyline = mapBoxPolyline.decode(leg.legGeometry.points);

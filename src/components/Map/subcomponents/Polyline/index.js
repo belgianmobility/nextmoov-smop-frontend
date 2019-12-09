@@ -8,7 +8,7 @@ type Props = {
   polylines: Array<Array>,
   colors: Array<string>,
   modes: Array<string>,
-  intermediatesStops: Array<Array>,
+  intermediateStops: Array<Array>,
 }
 
 function reversePolyline(polyline) {
@@ -20,14 +20,14 @@ function Polyline(props: Props) {
     polylines,
     colors,
     modes,
-    intermediatesStops,
+    intermediateStops,
   } = props;
   const reversedPolylines = polylines.map((polyline) => reversePolyline(polyline));
   return (
     <>
       <PolylineLayer polylines={reversedPolylines} colors={colors} modes={modes} />
       <LegsMarkers polylines={reversedPolylines} colors={colors} />
-      <StopsMarkers intermediatesStops={intermediatesStops} colors={colors} />
+      <StopsMarkers intermediateStops={intermediateStops} colors={colors} />
     </>
   );
 }
