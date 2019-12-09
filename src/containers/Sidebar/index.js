@@ -1,6 +1,5 @@
 // @flow
 import React from 'react';
-import s from './style.module.scss';
 import AutoComplete from '../AutoComplete';
 import Itinerary from '../../components/Itinerary';
 
@@ -24,7 +23,13 @@ function Sidebar(props: Props) {
   } = props;
 
   return (
-    <div className={s.sidebar}>
+    <div
+      style={{
+        flexBasis: '30%',
+        padding: '20px',
+        overflowY: 'scroll',
+      }}
+    >
       <AutoComplete
         onResultClick={onResultClick}
         position={position}
