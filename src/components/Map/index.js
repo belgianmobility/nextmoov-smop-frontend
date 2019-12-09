@@ -5,6 +5,7 @@ import MapItem from './MapItem';
 import mapConfig from '../../mapConfig';
 import { getBounds, findBounds } from '../../utils/mapBounds';
 import Polyline from './subcomponents/Polyline';
+import LayerMarker from './subcomponents/LayerMarker';
 
 type Props = {
   lang?: string,
@@ -29,7 +30,9 @@ function Map(props: Props) {
   } = props;
 
   const [hasPolyLines, setHasPolylines] = useState();
-  const [fitbounds, setFitbounds] = useState(getBounds(DEFAULT_COORDS, DEFAULT_DELTA));
+  const [fitbounds, setFitbounds] = useState(
+    getBounds(position !== undefined ? position : DEFAULT_COORDS, DEFAULT_DELTA),
+  );
 
   useEffect(() => {
     if (polylines.length > 0) {
@@ -68,6 +71,10 @@ function Map(props: Props) {
           intermediatesStops={intermediatesStops}
         />
       )}
+      <LayerMarker
+        center={position !== undefined ? position : DEFAULT_COORDS}
+        fillColor="#0000FF"
+      />
     </MapItem>
   );
 }
