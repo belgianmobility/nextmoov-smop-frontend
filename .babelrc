@@ -1,0 +1,16 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "useBuiltIns": "usage"
+      }
+    ],
+    "@babel/preset-react",
+    "flow"
+  ],
+  "plugins": [
+    "transform-decorators-legacy",
+    "dynamic-import-node"
+  ]
+}
