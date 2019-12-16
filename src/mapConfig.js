@@ -29,7 +29,7 @@ export default function (lang) {
       glyphs:
       'https://assets.smartmobilityplanner.be/barlow-pbf/{fontstack}/{range}.pbf',
       sprite:
-      'https://nextmoov.be/assets/sprite',
+      'https://assets.smartmobilityplanner.be/smop-sprites-os/sprite',
       sources:
       {
         waterways: {
