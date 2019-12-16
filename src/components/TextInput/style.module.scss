@@ -1,0 +1,11 @@
+.textinput {
+  &__label {
+    margin-bottom: 24px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    input{
+      margin-top: 8px;
+    }
+  }
+}
