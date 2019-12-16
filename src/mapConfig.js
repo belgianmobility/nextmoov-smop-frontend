@@ -27,9 +27,9 @@ export default function (lang) {
     mapStyle: {
       version: 8,
       glyphs:
-      'https://assets.smartmobilityplanner.be/glyphs/{fontstack}/{range}.pbf',
+      'https://assets.smartmobilityplanner.be/barlow-pbf/{fontstack}/{range}.pbf',
       sprite:
-      'https://api.jawg.io/sprites/sprites',
+      'https://assets.smartmobilityplanner.be/smop-sprites-os/sprite',
       sources:
       {
         waterways: {
@@ -7444,7 +7444,7 @@ export default function (lang) {
           layout: {
             'text-field': '{type}',
             'text-font': [
-              'Circular Std Book Italic',
+              'Barlow Italic',
             ],
             'text-padding': 4,
             'text-max-width': 7,
@@ -7466,7 +7466,7 @@ export default function (lang) {
               ['get', 'name'],
             ],
             'text-font': [
-              'Circular Std Book Italic',
+              'Barlow Italic',
             ],
             'symbol-placement': 'line',
             'text-pitch-alignment': 'viewport',
@@ -7521,7 +7521,7 @@ export default function (lang) {
             'text-max-angle': 30,
             'symbol-spacing': 250,
             'text-font': [
-              'Circular Std Book',
+              'Barlow Regular',
             ],
             'symbol-placement': 'line',
             'text-padding': 1,
@@ -7594,7 +7594,7 @@ export default function (lang) {
             'text-max-angle': 30,
             'symbol-spacing': 250,
             'text-font': [
-              'Circular Std Book',
+              'Barlow Regular',
             ],
             'symbol-placement': 'line',
             'text-padding': 1,
@@ -7675,7 +7675,7 @@ export default function (lang) {
             'text-max-angle': 30,
             'symbol-spacing': 250,
             'text-font': [
-              'Circular Std Book',
+              'Barlow Regular',
             ],
             'symbol-placement': 'line',
             'text-padding': 1,
@@ -7699,9 +7699,9 @@ export default function (lang) {
           minzoom: 14,
           layout: {
             'text-size': 10,
-            'icon-image': '{type}-11',
+            'icon-image': '{type}-small',
             'text-font': [
-              'Circular Std Medium',
+              'Barlow Medium',
             ],
             'text-offset': [0, 0.65],
             'text-padding': 1,
@@ -7826,7 +7826,7 @@ export default function (lang) {
             ],
             'text-transform': 'uppercase',
             'text-font': [
-              'Circular Std Medium',
+              'Barlow Medium',
             ],
             'text-letter-spacing': [
               'match',
@@ -7972,7 +7972,7 @@ export default function (lang) {
               ],
             ],
             'text-font': [
-              'Circular Std Medium',
+              'Barlow Medium',
             ],
             'text-justify': [
               'step',
@@ -8276,7 +8276,7 @@ export default function (lang) {
             ],
             'text-transform': 'uppercase',
             'text-font': [
-              'Circular Std Bold',
+              'Barlow Bold',
             ],
             'text-field': [
               'step',
@@ -8360,7 +8360,7 @@ export default function (lang) {
             ],
             'icon-image': 'dot-11',
             'text-font': [
-              'Circular Std Bold',
+              'Barlow Bold',
             ],
             'text-justify': [
               'step',
