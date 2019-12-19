@@ -7,6 +7,6 @@ export default {
       address: '/address',
     },
     searchTrip: '/otp/routers/default/plan?',
-    mapServerBase: '/tiles',
+    mapServerBase: '',
   },
 };
