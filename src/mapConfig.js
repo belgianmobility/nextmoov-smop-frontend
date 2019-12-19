@@ -1,6 +1,7 @@
 import config from './config';
 
-const mapServerBase = `${config.API}${config.APIRoutes.mapServerBase}`;
+const mapServerTiles = `${config.API}${config.APIRoutes.mapServerBase}/tiles`;
+const mapServerOceans = `${config.API}${config.APIRoutes.mapServerBase}/oceans.geojson`;
 
 
 export default function (lang) {
@@ -35,59 +36,62 @@ export default function (lang) {
         waterways: {
           type: 'vector',
           tiles:
-          [`${mapServerBase}/waterways/{z}/{x}/{y}.pbf`],
+          [`${mapServerTiles}/waterways/{z}/{x}/{y}.pbf`],
         },
         waterareas: {
           type: 'vector',
           tiles:
-          [`${mapServerBase}/waterareas/{z}/{x}/{y}.pbf`],
+          [`${mapServerTiles}/waterareas/{z}/{x}/{y}.pbf`],
         },
         landusages: {
           type: 'vector',
           tiles:
-          [`${mapServerBase}/landusages/{z}/{x}/{y}.pbf`],
+          [`${mapServerTiles}/landusages/{z}/{x}/{y}.pbf`],
         },
         aeroways: {
           type: 'vector',
           tiles:
-          [`${mapServerBase}/aeroways/{z}/{x}/{y}.pbf`],
+          [`${mapServerTiles}/aeroways/{z}/{x}/{y}.pbf`],
         },
         roads: {
           type: 'vector',
           tiles:
-          [`${mapServerBase}/roads/{z}/{x}/{y}.pbf`],
+          [`${mapServerTiles}/roads/{z}/{x}/{y}.pbf`],
         },
         transport_areas: {
           type: 'vector',
           tiles:
-          [`${mapServerBase}/transport_areas/{z}/{x}/{y}.pbf`],
+          [`${mapServerTiles}/transport_areas/{z}/{x}/{y}.pbf`],
         },
         admin: {
           type: 'vector',
           tiles:
-          [`${mapServerBase}/admin/{z}/{x}/{y}.pbf`],
+          [`${mapServerTiles}/admin/{z}/{x}/{y}.pbf`],
         },
         housenumbers: {
           type: 'vector',
           tiles:
-          [`${mapServerBase}/housenumbers/{z}/{x}/{y}.pbf`],
+          [`${mapServerTiles}/housenumbers/{z}/{x}/{y}.pbf`],
         },
         buildings: {
           type: 'vector',
           tiles:
-          [`${mapServerBase}/buildings/{z}/{x}/{y}.pbf`],
+          [`${mapServerTiles}/buildings/{z}/{x}/{y}.pbf`],
         },
         amenities: {
           type: 'vector',
           tiles:
-          [`${mapServerBase}/amenities/{z}/{x}/{y}.pbf`],
+          [`${mapServerTiles}/amenities/{z}/{x}/{y}.pbf`],
         },
         places: {
           type: 'vector',
           tiles:
-          [`${mapServerBase}/places/{z}/{x}/{y}.pbf`],
-        }
-        ,
+          [`${mapServerTiles}/places/{z}/{x}/{y}.pbf`],
+        },
+        oceans_all: {
+          type: 'geojson',
+          data: mapServerOceans,
+        },
       },
       layers: [
         {
@@ -96,6 +100,15 @@ export default function (lang) {
           layout: {},
           paint: {
             'background-color': 'hsl(39, 47%, 86%)',
+          },
+        },
+        {
+          id: 'oceans',
+          type: 'fill',
+          source: 'oceans_all',
+          layout: {},
+          paint: {
+            'fill-color': 'hsl(205, 76%, 70%)',
           },
         },
         {
